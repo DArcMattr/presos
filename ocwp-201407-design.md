@@ -31,6 +31,8 @@ TODO: picture of plain code
 
 TODO: picture of syntax highlighted code
 
+Line Numbering also helps, but it's not essential
+
 ---
 
 # Preparing Your Wordpress Install for Theming
@@ -68,18 +70,71 @@ from.
 
 What you need to know about PHP to understand what's in the Naked Theme:
 
+* PHP stuffs:
+
+    <?php ... ?>
+
+    This is where syntax highlighting comes in handy.
+
 * Comments
+
+    // This is a standalone comment
+
+    # Another way to make a standalone comment
+
+    /*
+    * this style of commenting you've seen before in CSS
+    */
 
   The Naked Theme has extensive comments written about what is going on in all
   the pages and all the parts of the theme
 
 * Control Structures
 
+    if ( count( $posts ) > 0 ) {                              if ( count( $posts ) > 0 ):
+      echo "Condition the first";                               ...
+    } elseif ( count( $posts ) === 0 ) {                      elseif ( count( $posts ) === 0 ):
+                                               Or               ...
+    } else {                                                  else:
+
+    }                                                         endif;
+
+    while():
+    endwhile;
+
+* Functions
+
 * Where to read up about these things
 
   * <http://php.net>
   * <http://stackoverflow.com>
   * <http://wordpress.stackexchange.com>
+
+---
+
+# Whitescreen
+
+The result of saving a broken PHP file.
+
+You **will** whitescreen your site when developing a theme, so if you're cowboy
+coding anyways, don't.
+
+Seriously, don't.
+
+---
+
+# Diagnosing Whitescreens
+
+Know where your development server keeps its server logs. The logs will tell
+you, in PHP-ese, what your bug is. Copy/paste the error message into Google, and
+see what comes up.
+
+In your development `wp-config.php`, make sure you have:
+
+    define( WP_DEBUG, TRUE );
+
+DesktopServer has an option for "Enable Trace and Debug", turn it on for an even
+greater deluge of logging details.
 
 ---
 
@@ -104,6 +159,8 @@ WordPress does things, and the resulting site is:
 # Theme organization
 
 <http://codex.wordpress.org/Template_Hierarchy>
+
+[![Template Hierarchy](img/300px-Template_Hierarchy.png)](img/Template_Hierarchy.png)
 
 ---
 
