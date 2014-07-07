@@ -65,42 +65,123 @@ All at once!
 We're going to look at the Naked Theme, hosted at
 <http://naked-wordpress.bckmn.com/>. It's made for people to study and learn
 from.
+---
+
+# What's needed for a theme?
+
+At the bare minimum: `style.css` and `index.php`
+
+The `style.css` file has a special header section that announces the name of the
+theme, the author, and other details
+
+From Naked Theme:
+
+    /*
+    Theme Name: Naked Wordpress
+    Theme URI: http://bckmn.com/naked-wordpress
+    Author: J Beckman
+    Author URI: http://bckmn.com
+    Description: A super bare theme for designers who don't know Wordpress PHP but
+    want to build with Wordpress.
+    Version: 1.0
+    License: GNU General Public License
+    ...
+    */
 
 ---
 
-What you need to know about PHP to understand what's in the Naked Theme:
+# PHP Crash Course
 
-* PHP stuffs:
+What you need to know about PHP so you're familiar with what's in a typical theme.
+
+My approach to learning a new language is to get reading comprehension in place
+before learning to write.
+
+This is a quick overview, at 40,000 feet
+
+## PHP Blocks
+
+Marked with
 
     <?php ... ?>
 
-    This is where syntax highlighting comes in handy.
+Just as a sentence needs to end with '.' or '?' or '!' to be correct, PHP
+statements must end with a ';' to be correct.
 
-* Comments
+---
+
+# Hello World
+
+For programming languages, the tradition is to show off what an "easy" program
+would look like:
+
+    <?php
+    echo "Hello World";
+    ?>
+
+---
+
+# Code Comments
+
+The Naked Theme has extensive comments written about what is going on in all
+the pages and all the parts of the theme
 
     // This is a standalone comment
 
-    # Another way to make a standalone comment
+    # This is another standalone comment
 
     /*
     * this style of commenting you've seen before in CSS
     */
 
-  The Naked Theme has extensive comments written about what is going on in all
-  the pages and all the parts of the theme
+---
 
-* Control Structures
+# PHP Grammar
 
-    if ( count( $posts ) > 0 ) {                              if ( count( $posts ) > 0 ):
-      echo "Condition the first";                               ...
-    } elseif ( count( $posts ) === 0 ) {                      elseif ( count( $posts ) === 0 ):
-                                               Or               ...
-    } else {                                                  else:
+Be able to recognize what piece of a statement is what
 
-    }                                                         endif;
+## Nouns & Verbs
 
-    while():
-    endwhile;
+Be able to recognize what part of the PHP statement is what.
+
+### Nouns
+
+Numbers, Strings, PHP treats them differently
+
+Strings need quotes, "" or '', they can be joined together (concatenated) with
+a '.'
+
+Numbers: anything you can do arithmetic with
+
+### Verbs
+
+Functions & built-in commands
+
+---
+
+# Control Structures
+
+If-Then Statements:
+
+    if ( have_posts() ) {                            if ( have_posts() ):
+      ...                                              ...
+    } else {                            Or           else:
+      ...                                              ...
+    }                                                endif;
+
+  Switches: not
+
+  switch ( $thing )
+
+---
+
+* Loops
+    for
+    foreach
+
+      while(  ):
+        ...
+      endwhile;
 
 * Functions
 
@@ -109,32 +190,6 @@ What you need to know about PHP to understand what's in the Naked Theme:
   * <http://php.net>
   * <http://stackoverflow.com>
   * <http://wordpress.stackexchange.com>
-
----
-
-# Whitescreen
-
-The result of saving a broken PHP file.
-
-You **will** whitescreen your site when developing a theme, so if you're cowboy
-coding anyways, don't.
-
-Seriously, don't.
-
----
-
-# Diagnosing Whitescreens
-
-Know where your development server keeps its server logs. The logs will tell
-you, in PHP-ese, what your bug is. Copy/paste the error message into Google, and
-see what comes up.
-
-In your development `wp-config.php`, make sure you have:
-
-    define( WP_DEBUG, TRUE );
-
-DesktopServer has an option for "Enable Trace and Debug", turn it on for an even
-greater deluge of logging details.
 
 ---
 
@@ -160,13 +215,44 @@ WordPress does things, and the resulting site is:
 
 <http://codex.wordpress.org/Template_Hierarchy>
 
-[![Template Hierarchy](img/300px-Template_Hierarchy.png)](img/Template_Hierarchy.png)
+[![Template Hierarchy](img/Template_Hierarchy-thumb.png)](img/Template_Hierarchy.png)
 
 ---
 
-# Underscores
+# Making your own theme from scratch?
+
+No!
+
+The WordPress theme developers have a template theme they use to start all their
+new default themes, Underscores:
 
 <http://underscores.me>
+
+---
+
+# Whitescreen
+
+The result of loading a broken PHP file.
+
+You **will** whitescreen your site when developing a theme, so if you're cowboy
+coding anyways, don't.
+
+Seriously, don't.
+
+---
+
+# Diagnosing Whitescreens
+
+Know where your development server keeps its server logs. The logs will tell
+you, in PHP-ese, what your bug is. Copy/paste the error message into Google, and
+see what comes up.
+
+In your development `wp-config.php`, make sure you have:
+
+    define( WP_DEBUG, TRUE );
+
+DesktopServer has an option for "Enable Trace and Debug", turn it on for an even
+greater deluge of logging details.
 
 ---
 
@@ -181,7 +267,7 @@ Every theme get gets hosted at WordPress.org has to pass these checks.
 
 ---
 
-# Jumping In the Deep End
+# Trial by Fire
 
 Take an old theme, and make it Theme Check stops complaining about it
 
