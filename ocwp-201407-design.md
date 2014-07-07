@@ -1,11 +1,13 @@
 # How to Theme
 
-## A guided syllabus for making a theme
+## A guided syllabus for learning how to make a theme
 
-<http://static.davidthemachine.org/placeholder>
+<http://static.davidthemachine.org/presos/ocwp-201407-design.html>
 <!-- make this a footer? -->
 
 ---
+
+# Preparation
 
 What you're going to need:
 
@@ -27,9 +29,10 @@ Like having sentences diagrammed for you
 
 ---
 
-TODO: picture of plain code
+# Which would you rather work with?
 
-TODO: picture of syntax highlighted code
+![![Plain code](img/nosyntax.png)](img/nosyntax_crop.png)
+![![Highlighted code](img/syntax.png)](img/syntax_crop.png)
 
 Line Numbering also helps, but it's not essential
 
@@ -65,14 +68,16 @@ All at once!
 We're going to look at the Naked Theme, hosted at
 <http://naked-wordpress.bckmn.com/>. It's made for people to study and learn
 from.
+
 ---
 
 # What's needed for a theme?
 
-At the bare minimum: `style.css` and `index.php`
+At the bare minimum: `style.css` and `index.php` files
 
 The `style.css` file has a special header section that announces the name of the
-theme, the author, and other details
+theme, the author, and other details. While this section is commented out, it
+still has power, and are the starting of a theme.
 
 From Naked Theme:
 
@@ -97,7 +102,10 @@ What you need to know about PHP so you're familiar with what's in a typical them
 My approach to learning a new language is to get reading comprehension in place
 before learning to write.
 
-This is a quick overview, at 40,000 feet
+This is a quick overview, at 40,000 feet at a cruising velocity of 580 miles per
+hour.
+
+---
 
 ## PHP Blocks
 
@@ -140,74 +148,134 @@ the pages and all the parts of the theme
 
 Be able to recognize what piece of a statement is what
 
-## Nouns & Verbs
+## Nouns & Verbs & Conjunctions (Control Structures)
 
 Be able to recognize what part of the PHP statement is what.
 
-### Nouns
+---
+# Nouns
 
-Numbers, Strings, PHP treats them differently
+Variables: Numbers, Strings, PHP treats them differently
+
+They show up in code like:
+
+    $variable = 5;
+    $another_variable = "shoes";
 
 Strings need quotes, "" or '', they can be joined together (concatenated) with
 a '.'
 
-Numbers: anything you can do arithmetic with
-
-### Verbs
-
-Functions & built-in commands
+Numbers: anything you can do arithmetic with, or compare with
+less-than/greater-than
 
 ---
 
-# Control Structures
+# Compound Nouns
 
-If-Then Statements:
+Arrays: A list of variables that's referred to as a single variable.
 
-    if ( have_posts() ) {                            if ( have_posts() ):
-      ...                                              ...
-    } else {                            Or           else:
-      ...                                              ...
-    }                                                endif;
+Flat list, or "Number-indexed Array":
 
-  Switches: not
+    $numbers = array( 1, 2, 3, 4, 5, 6 );
+    $vowels = array( "a", "e", "i", "o", "u" );
 
-  switch ( $thing )
+Labeled List, or "Associative Array":
 
----
+    $post_details = array(
+      "title" => "Post Title",
+      "author" => "Post Author",
+      ...
+    );
 
-* Loops
-    for
-    foreach
+There are different ways to write out arrays <http://us3.php.net/manual/en/function.array.php>
 
-      while(  ):
-        ...
-      endwhile;
-
-* Functions
-
-* Where to read up about these things
-
-  * <http://php.net>
-  * <http://stackoverflow.com>
-  * <http://wordpress.stackexchange.com>
+There can be arrays of arrays, the rabbit hole goes and goes...
 
 ---
 
-# WordPress functions
+# Verbs
+
+These are the functions & built-in PHP commands
+
+---
+
+# Control Structures, the Conjunctions of Programming
+
+I will focus on the control structures used in the Naked Theme
+
+---
+
+# Conditionals
+
+The most common type of conditional is the If-Then Statement:
+
+    if ( have_posts() ) {       if ( have_posts() ):
+      ...                         ...
+    } else {                Or  else:
+      ...                         ...
+    }                           endif;
+
+As if to say: "If this, then that."
+
+---
+
+# Loops
+
+The workhorse of a WordPress theme is The Loop, and it's usually done with
+a `while` statement. The while statement keeps working until the statement in
+the first set of parenthese is no longer true.
+
+    while( have_posts() ) {      while(  ):
+      ...                    Or    ...
+    }                            endwhile;
+
+All the possible control structures used in PHP are documented at
+<http://www.php.net/manual/en/control-structures.intro.php>
+
+---
+
+# Functions
+
+A function is a bundle of programming commands.
+
+    function naked_scripts()  {
+
+      // get the theme directory style.css and link to it in the header
+      wp_enqueue_style( 'naked-style', get_template_directory_uri() . '/style.css', '10000', 'all' );
+
+      // add fitvid
+      wp_enqueue_script( 'naked-fitvid', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), NAKED_VERSION, true );
+
+      // add theme scripts
+      wp_enqueue_script( 'naked', get_template_directory_uri() . '/js/theme.min.js', array(), NAKED_VERSION, true );
+
+    }
+
+Where to read up about functions in PHP
+
+* <http://php.net>
+* <http://stackoverflow.com>
+* <http://wordpress.stackexchange.com>
+
+---
+
+# WordPress Functions
 
 WordPress is written with PHP, and you'll need to learn the PHP functions that
 WordPress uses, and how a theme is organized
 
 Learning how to navigate the Codex is half the battle, as GI Joe would say.
 
-* <http://codex.wordpress.org>
+* <http://codex.wordpress.org> (older)
+* <http://developer.wordpress.org/reference/> (newer, not complete yet)
 
 ---
 
-WordPress developers are working on a better approach to documenting how
-WordPress does things, and the resulting site is:
+# `functions.php`
 
-* <http://developer.wordpress.org/reference/>
+This is a file that has theme-specific functions that affect what's not easily
+included in the pieces of a WordPress theme, like widget areas, menus, and
+additional CSS & JS files you need to load up.
 
 ---
 
@@ -219,12 +287,19 @@ WordPress does things, and the resulting site is:
 
 ---
 
+# More on Theme Development
+
+WordPress.org's introduction to Theme Development is at
+<http://codex.wordpress.org/Theme_Development>
+
+---
+
 # Making your own theme from scratch?
 
-No!
+Start from an empty file? No!
 
-The WordPress theme developers have a template theme they use to start all their
-new default themes, Underscores:
+The WordPress theme developers have a template theme they use to build all their
+new core themes, Underscores:
 
 <http://underscores.me>
 
@@ -238,6 +313,9 @@ You **will** whitescreen your site when developing a theme, so if you're cowboy
 coding anyways, don't.
 
 Seriously, don't.
+
+But on your own developer install, take those risks, learn what breaks
+WordPress, and how to fix it.
 
 ---
 
