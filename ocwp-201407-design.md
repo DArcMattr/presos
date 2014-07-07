@@ -1,25 +1,23 @@
 # How to Theme
 
-## A guided syllabus for learning how to make a theme
+## A guided syllabus for learning how to make a WordPress theme
 
 <http://static.davidthemachine.org/presos/ocwp-201407-design.html>
 <!-- make this a footer? -->
-
----
 
 # Preparation
 
 What you're going to need:
 
-* A knowledge of HTML and CSS
-* A text editor that has **syntax coloring**
-  * Sublime (cross-platform) <http://www.sublimetext.com/>
-  * Gedit (cross-platform) <https://wiki.gnome.org/Apps/Gedit#Download>
-  * Coda (Mac OS) <https://panic.com/coda/>
-  * Notepad++ (Windows) <http://notepad-plus-plus.org/>
-  * Dreamweaver (Mac OS & Windows) <http://www.adobe.com/products/dreamweaver.html>
+A knowledge of HTML and CSS
 
----
+A text editor that has **syntax coloring**
+
+* Sublime (cross-platform) <http://www.sublimetext.com/>
+* Gedit (cross-platform) <https://wiki.gnome.org/Apps/Gedit#Download>
+* Coda (Mac OS) <https://panic.com/coda/>
+* Notepad++ (Windows) <http://notepad-plus-plus.org/>
+* Dreamweaver (Mac OS & Windows) <http://www.adobe.com/products/dreamweaver.html>
 
 # Syntax Coloring
 
@@ -27,29 +25,23 @@ Like having sentences diagrammed for you
 
 ![Sentence Diagram](img/sentence_diagram.png)
 
----
+# Which would you rather read?
 
-# Which would you rather work with?
-
-![![Plain code](img/nosyntax.png)](img/nosyntax_crop.png)
-![![Highlighted code](img/syntax.png)](img/syntax_crop.png)
+![[Plain code](img/nosyntax.png)](img/nosyntax_crop.png)
+![[Highlighted code](img/syntax.png)](img/syntax_crop.png)
 
 Line Numbering also helps, but it's not essential
 
----
+# Prepare WordPress for Theming
 
-# Preparing Your Wordpress Install for Theming
-
-* Work on a standalone, private server, I recommend DesktopServer, but I have
-  not used it
+Work on a standalone, private machine, I recommend DesktopServer, but I have not
+used it
 
   <http://serverpress.com/products/desktopserver/>
 
-* Import theme testing content using the steps outlined at
+Import theme testing content using the steps outlined at
 
   <http://codex.wordpress.org/Theme_Unit_Test>
-
----
 
 # Things you will learn
 
@@ -61,15 +53,11 @@ Line Numbering also helps, but it's not essential
 
 All at once!
 
----
-
 # Immersion
 
 We're going to look at the Naked Theme, hosted at
 <http://naked-wordpress.bckmn.com/>. It's made for people to study and learn
 from.
-
----
 
 # What's needed for a theme?
 
@@ -93,8 +81,6 @@ From Naked Theme:
     ...
     */
 
----
-
 # PHP Crash Course
 
 What you need to know about PHP so you're familiar with what's in a typical theme.
@@ -105,9 +91,7 @@ before learning to write.
 This is a quick overview, at 40,000 feet at a cruising velocity of 580 miles per
 hour.
 
----
-
-## PHP Blocks
+# PHP Blocks
 
 Marked with
 
@@ -115,8 +99,6 @@ Marked with
 
 Just as a sentence needs to end with '.' or '?' or '!' to be correct, PHP
 statements must end with a ';' to be correct.
-
----
 
 # Hello World
 
@@ -126,8 +108,6 @@ would look like:
     <?php
     echo "Hello World";
     ?>
-
----
 
 # Code Comments
 
@@ -142,8 +122,6 @@ the pages and all the parts of the theme
     * this style of commenting you've seen before in CSS
     */
 
----
-
 # PHP Grammar
 
 Be able to recognize what piece of a statement is what
@@ -152,7 +130,7 @@ Be able to recognize what piece of a statement is what
 
 Be able to recognize what part of the PHP statement is what.
 
----
+
 # Nouns
 
 Variables: Numbers, Strings, PHP treats them differently
@@ -167,8 +145,6 @@ a '.'
 
 Numbers: anything you can do arithmetic with, or compare with
 less-than/greater-than
-
----
 
 # Compound Nouns
 
@@ -191,19 +167,13 @@ There are different ways to write out arrays <http://us3.php.net/manual/en/funct
 
 There can be arrays of arrays, the rabbit hole goes and goes...
 
----
-
 # Verbs
 
 These are the functions & built-in PHP commands
 
----
-
 # Control Structures, the Conjunctions of Programming
 
 I will focus on the control structures used in the Naked Theme
-
----
 
 # Conditionals
 
@@ -217,8 +187,6 @@ The most common type of conditional is the If-Then Statement:
 
 As if to say: "If this, then that."
 
----
-
 # Loops
 
 The workhorse of a WordPress theme is The Loop, and it's usually done with
@@ -231,8 +199,6 @@ the first set of parenthese is no longer true.
 
 All the possible control structures used in PHP are documented at
 <http://www.php.net/manual/en/control-structures.intro.php>
-
----
 
 # Functions
 
@@ -257,8 +223,6 @@ Where to read up about functions in PHP
 * <http://stackoverflow.com>
 * <http://wordpress.stackexchange.com>
 
----
-
 # WordPress Functions
 
 WordPress is written with PHP, and you'll need to learn the PHP functions that
@@ -269,15 +233,11 @@ Learning how to navigate the Codex is half the battle, as GI Joe would say.
 * <http://codex.wordpress.org> (older)
 * <http://developer.wordpress.org/reference/> (newer, not complete yet)
 
----
-
 # `functions.php`
 
 This is a file that has theme-specific functions that affect what's not easily
 included in the pieces of a WordPress theme, like widget areas, menus, and
 additional CSS & JS files you need to load up.
-
----
 
 # Theme organization
 
@@ -285,14 +245,10 @@ additional CSS & JS files you need to load up.
 
 [![Template Hierarchy](img/Template_Hierarchy-thumb.png)](img/Template_Hierarchy.png)
 
----
-
 # More on Theme Development
 
 WordPress.org's introduction to Theme Development is at
 <http://codex.wordpress.org/Theme_Development>
-
----
 
 # Making your own theme from scratch?
 
@@ -302,8 +258,6 @@ The WordPress theme developers have a template theme they use to build all their
 new core themes, Underscores:
 
 <http://underscores.me>
-
----
 
 # Whitescreen
 
@@ -316,8 +270,6 @@ Seriously, don't.
 
 But on your own developer install, take those risks, learn what breaks
 WordPress, and how to fix it.
-
----
 
 # Diagnosing Whitescreens
 
@@ -332,8 +284,6 @@ In your development `wp-config.php`, make sure you have:
 DesktopServer has an option for "Enable Trace and Debug", turn it on for an even
 greater deluge of logging details.
 
----
-
 # Checking Your Work
 
 Is your theme made using the latest that WordPress has to offer? Is it put
@@ -342,8 +292,6 @@ together correctly?
 WordPress Theme Check <https://wordpress.org/plugins/theme-check/>
 
 Every theme get gets hosted at WordPress.org has to pass these checks.
-
----
 
 # Trial by Fire
 
