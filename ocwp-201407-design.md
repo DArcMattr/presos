@@ -91,6 +91,9 @@ before learning to write.
 This is a quick overview, at 40,000 feet at a cruising velocity of 580 miles per
 hour.
 
+You do not need to be fluent in PHP to start being productive in it! A little
+bit of knowledge can get you far.
+
 # PHP Blocks
 
 Marked with
