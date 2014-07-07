@@ -171,7 +171,7 @@ There can be arrays of arrays, the rabbit hole goes and goes...
 
 These are the functions & built-in PHP commands
 
-# Control Structures, the Conjunctions of Programming
+## Control Structures, the Conjunctions of Programming
 
 I will focus on the control structures used in the Naked Theme
 
