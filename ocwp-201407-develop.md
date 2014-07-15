@@ -66,7 +66,7 @@ PHPCS & PHPMD are made to be command-line tools, but there are plenty of plugins
 made for your favorite text editor or development IDE.
 
 My examples will be with Vim in the
-(vim-phpqa)[https://github.com/joonty/vim-phpqa] plugin
+[vim-phpqa](https://github.com/joonty/vim-phpqa) plugin
 
 # Checks in WordPress
 
