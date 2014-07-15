@@ -14,7 +14,7 @@ by David Arceneaux
 
 Other developers have been bitten by more/different things than you have been.
 
-# Problems
+# Problems with getting other eyeballs
 
 * Working on closed source
 
@@ -28,6 +28,8 @@ A set of projects curated at <http://phpqatools.org>
 
 I'll be focusing on PHP Code Sniffer & PHP Mess Detector
 
+These are command-line tools
+
 # PHP Mess Detector
 
 Opinionated code critique tool <http://phpmd.org/about.html>
@@ -38,7 +40,11 @@ Best to install with Composer
 
 # PHP Code Sniffers
 
-PHP Code Sniffer checks code formatting
+PHP Code Sniffer checks code formatting for
+
+* tabs vs spaces
+* levels of indentation
+* spaces around function inputs & operators
 
 <https://github.com/squizlabs/PHP_CodeSniffer>
 
@@ -59,11 +65,12 @@ Composer
 PHPCS & PHPMD are made to be command-line tools, but there are plenty of plugins
 made for your favorite text editor or development IDE.
 
+My examples will be with Vim in the
+(vim-phpqa)[https://github.com/joonty/vim-phpqa] plugin
+
 # Checks in WordPress
 
 For new themes & plugins that are to be hosted on wordpress.org, they need to
 pass the tests coded in [Theme Check](https://wordpress.org/plugins/theme-check/) and
 [Plugin Check](https://wordpress.org/plugins/plugin-check/) (though Plugin Check hasn't
 been updated in a while)
-
-#
