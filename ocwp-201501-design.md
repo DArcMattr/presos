@@ -1,31 +1,40 @@
 # SVG
 
-## Presentation is at [http://static.davidthemachine.org/presos/ocwp-201501-design.html#/SVG](http://static.davidthemachine.org/presos/ocwp-201501-design.html#/SVG)
+## Scalable Vector Graphics
 
-Scalable Vector Graphics
+Presentation is at [http://static.davidthemachine.org/presos/ocwp-201501-design.html#/scalable-vector-graphics](http://static.davidthemachine.org/presos/ocwp-201501-design.html#/scalable-vector-graphics)
 
-# Wait, whut?
-
-Compared with raster graphics. The images we see are all made as a raster: like
-a painting made on a giant piece of graph paper--here's a black square, a yellow
-square, etc.
-
-Doesn't scale at all well
-
-# Ye Olden Tyme Graphics
-
-Could give sharp graphics before more modern technologies:
-
-Remember the old [Asteroids arcade game](http://www.arcade-museum.com/game_detail.php?game_id=6939)?
-
-![Asteroids](http://www.arcade-museum.com/images/118/1181242049100.png)<br>(From the above link)
-
-# But still, what is it?
+# What is it?
 
 It's a variant of XML (eXtensible Markup Language), which is like human readable
 binary. It describes images geometrically.
 
+This is to be contrasted with Raster Graphics.
+
+# Wait, whut?
+
+Most, if not all modern graphics are raster graphics. The images we see are all
+like a painting made on a giant piece of graph paper--here's a black square,
+a yellow square, etc.
+
+Raster graphics don't scale at all well, the new batch of HiDPI screens make the
+olden low-dpi images look fuzzy.
+
+# Ye Olden Tyme Graphics
+
+Remember the old [Asteroids arcade game](http://www.arcade-museum.com/game_detail.php?game_id=6939)?
+
+![Asteroids](http://www.arcade-museum.com/images/118/1181242049100.png)
+
+Could give sharp graphics before more modern technologies came to eat its lunch
+
+# But still, what is SVG?
+
+I'll show you some examples. Let's open up some of the following files in
+a source view.
+
 # Hand made
+
 I had to make a quick and dirty layout diagram for a project I worked on, this
 is the result:
 
