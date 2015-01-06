@@ -40,6 +40,10 @@ is the result:
 
 * [truck-double.svg](img/201501-des/truck-double.svg)
 * [truck-full.svg](img/201501-des/truck-full.svg)
+* [Pythagorean Theorem Demo](http://static.davidthemachine.org/triangle/)
+
+CSS styling can be used on the elements. Javascript can also interact with the
+pieces.
 
 # Made by a program
 * [bg-eye.svg](img/201501-des/bg-eye.svg) From a site that Zeek worked on
@@ -59,3 +63,5 @@ is the result:
 * [Demosthenes](http://demosthenes.info/blog/970/Web-Developer-Reading-List-Introduction-to-SVG)
   Dudley Storey's reading list on how to work with SVG to replace things that
   Flash once did, and how to get Adobe Illustrator to produce efficient output
+* [SVGeneration](http://svgeneration.com) SVG backgrounds that can be used in
+  CSS
