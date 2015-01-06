@@ -38,20 +38,20 @@ a source view.
 I had to make a quick and dirty layout diagram for a project I worked on, this
 is the result:
 
-* [truck-double.svg](image/201501-des/truck-double.svg)
-* [truck-full.svg](image/201501-des/truck-full.svg)
+* [truck-double.svg](img/201501-des/truck-double.svg)
+* [truck-full.svg](img/201501-des/truck-full.svg)
 
 # Made by a program
-* [bg-eye.svg](image/201501-des/bg-eye.svg) From a site that Zeek worked on
+* [bg-eye.svg](img/201501-des/bg-eye.svg) From a site that Zeek worked on
   recently (<http://beautycon.com>)
-* [drawing.svg](image/201501-des/drawing.svg)
+* [drawing.svg](img/201501-des/drawing.svg)
 
 # Tools
 * [SVG Optimizer](http://petercollingridge.appspot.com/svg-optimiser)
 
 # Optimized
-* [bg-eye.min.svg](image/201501-des/bg-eye.min.svg)
-* [drawing_optimized.svg](image/201501-des/drawing_optimized.svg)
+* [bg-eye.min.svg](img/201501-des/bg-eye.min.svg)
+* [drawing_optimized.svg](img/201501-des/drawing_optimized.svg)
 
 # Reading List
 * [CSS-Tricks](http://css-tricks.com/mega-list-svg-information/) Chris Coyier is
