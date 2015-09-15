@@ -1,4 +1,4 @@
-# Ye Old Tyme WordPress AJAX
+# Ye Olde Tyme WordPress AJAX
 
 ## Understanding the Old to Roll in the New
 
