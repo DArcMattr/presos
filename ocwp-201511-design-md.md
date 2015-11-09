@@ -23,10 +23,10 @@ people.
 
 Would \*you\* rather \*\*write\*\* out:
 
-\* A nested list
-&nbsp;&nbs;\* with even only two levels
-\* in \`HTML\`,
-&nbsp;&nbsp;\* or as something lighter?
+\* A nested list<br>
+&nbsp;&nbs;\* with even only two levels<br>
+\* in \`HTML\`,<br>
+&nbsp;&nbsp;\* or as something lighter?<br>
 
 Would \*you\* rather \*\*read\*\* it as \`HTML\`?
 
@@ -86,8 +86,8 @@ It has a counterpart that's already in WordPress, called
 
 John Gruber picked the name for his "try it before you buy it" form
 
-[Markdown Dingus](http://daringfireball.net/projects/markdown/dingus)
-[Markdown Extended Dingus](https://michelf.ca/projects/php-markdown/dingus/)
+* [Markdown Dingus](http://daringfireball.net/projects/markdown/dingus)
+* [Markdown Extended Dingus](https://michelf.ca/projects/php-markdown/dingus/)
 
 And there's always [CodePen.io](http://codepen.io)
 
