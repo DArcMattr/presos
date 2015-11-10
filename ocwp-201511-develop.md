@@ -48,14 +48,15 @@ AAAA record with your assigned IPv6 address
 No longer necessary to serve HTTPS on a unique port ([SNI](https://wiki.apache.org/httpd/NameBasedSSLVHostsWithSNI)), and was never an SEO
 requirement ( watch a Googler talk about it <https://youtu.be/4peSUa2FKvk> )
 
+Talk to your ISP tech support about IPv6 today!
+
 # Software support
 
 Where your site or plugin might log IP address, make sure it's not got IPv4
-assumptions baked in
+assumptions baked in.
 
-Check your device's settings to see if you're on an IPv6 network now
-
-There are
+Check your device's settings to see if you're on an IPv6 network now, in the
+networking menu/settings.
 
 # HTTP/2
 
@@ -70,13 +71,14 @@ It's designed to work nearly transparently, URLs won't change
 
 # What does it have over plain ol' HTTP?
 
-Header compression, by being binary & stream-compressed.
+1. Header compression, by being binary & stream-compressed. Existing tools like
+    Curl will deal with this transparently
 
-Pipelining, pushing all page assets through a single TCP/IP connection, instead
-of letting your browser request many separate assets through HTTP requests.
+1. Pipelining, pushing all page assets through a single TCP/IP connection,
+    instead of letting your browser request many separate assets through HTTP requests.
 
-Mandatory HTTPS, recommended in the standard, and major browser vendors are
-implementing that recommendation
+1. **Mandatory HTTPS**, recommended in the standard, and major browser vendors are
+    implementing that recommendation
 
 # Do you have to do anything special for HTTP/2?
 
