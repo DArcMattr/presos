@@ -61,12 +61,14 @@ ssh hostalias \
   2>&1
 ~~~
 
-# WP-CLI: Interactive Modes
+# WP-CLI: PHP Interactive Mode
 
 `wp shell`: a Read-Evaluate-Print-Loop (REPL) for your WordPress installation
 
 This lets you run PHP code in a *snapshot* load of the site you&rsquo;re working
 on. This is what I consider to be the killer feature of WP-CLI.
+
+# WP-CLI: MySQL Interactive Mode
 
 `wp db cli`: REPL for the DB
 
@@ -80,10 +82,17 @@ SHOW COLUMNS FROM wp_posts\G
 The `\G` is is an alternative to `;` which prints query results in a long view,
 which is more humane for a terminal.
 
-And a trick: Vi mode! <small>Or Emacs if that&rsquo;s your thing.</small>
+# And a trick!
+
+Vi mode! <small>Or Emacs if that&rsquo;s your thing.</small>
 
 Why Vi mode? It lets you navigate and manipulate command lines without having to
-move your fingers far from the home row.
+move your fingers far from the home row. The main benefit is also its major
+drawback: it&rsquo;s modal, and its keybinds sometimes lack good mnemonics.
+
+There are plenty of tutorials for Vim (modern Vi), even online interactive ones.
+
+How is this done?
 
 # Readline config
 
