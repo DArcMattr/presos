@@ -157,3 +157,5 @@ Git Hooks: <http://webadvent.org/2008/dont-commit-that-error-by-travis-swicegood
 The sky is the limit here, you can run any shell script at any stage in your Git
 workflow.
 
+These hooks can be installed for any new git project if you follow the
+directions at <https://coderwall.com/p/jp7d5q/create-a-global-git-commit-hook>
