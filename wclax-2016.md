@@ -80,9 +80,12 @@ SHOW COLUMNS FROM wp_posts\G
 The `\G` is is an alternative to `;` which prints query results in a long view,
 which is more humane for a terminal.
 
-# Readline config
+And a trick: Vi mode! <small>Or Emacs if that&rsquo;s your thing.</small>
 
-And a trick: Vi mode! Or Emacs if that&rsquo;s your thing.
+Why Vi mode? It lets you navigate and manipulate command lines without having to
+move your fingers far from the home row.
+
+# Readline config
 
 This uses the Readline library
 
