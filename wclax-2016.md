@@ -2,9 +2,9 @@
 
 ## A workshop on command line tools
 
-More like a guided syllabus
+A guided syllabus
 
-<https://static.davidthemachine.org/presos/wclax-2016.html#>
+<https://static.davidthemachine.org/presos/wclax-2016.html#/a-workshop-on-command-line-tools>
 
 # Requirements
 
@@ -12,7 +12,8 @@ A Unix-like system that can host WordPress
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SpLRTAGa6bU" frameborder="0" allowfullscreen></iframe>
 
-Mac, Linux, & BSD&mdash;with workarounds for Windows (virtual machine upcoming Windows Subsystem for Linux)
+Mac, Linux, & BSD&mdash;with workarounds for Windows (virtual machine upcoming
+Windows Subsystem for Linux)
 
 # Varying Vagrant Vagrants
 
@@ -20,7 +21,8 @@ I use this as a common reference point. Every system will have its own quirks.
 I&rsquo;m picking it because it has comes with WP-CLI, PHP Code Sniffer and PHP
 Mess Detector installed & configured for developing a WordPress site
 
-Takes an hour+ to install everything necessary for it <https://github.com/Varying-Vagrant-Vagrants/VVV/>
+Takes an hour+ to install everything necessary for it, see the instructions at
+<https://github.com/Varying-Vagrant-Vagrants/VVV/>
 
 # WP-CLI
 
@@ -35,6 +37,12 @@ If there&rsquo;s one tool I talk about here, install this.
     wp core check-update
     wp plugin list --fields=name,version,update_version --status=active --update=available
     wp theme list --fields=name,version,update_version --status=active --update=available
+
+You can copy/paste this text chunk into a text file, name it something like
+`sync.sh`, and run the command `chmod +x sync.sh` -- you got yourself
+a <strike>stew</strike> helper shell script.
+
+# WP-CLI: More conveniences
 
 Sync&rsquo;ing DB images without having to embed passwords in shell scripts:
 
@@ -57,13 +65,26 @@ ssh hostalias \
 
 `wp shell`: a Read-Evaluate-Print-Loop (REPL) for your WordPress installation
 
+This lets you run PHP code in a *snapshot* load of the site you&rsquo;re working
+on. This is what I consider to be the killer feature of WP-CLI.
+
 `wp db cli`: REPL for the DB
+
+This works on a realtime view of your database.
+
+~~~
+SHOW TABLES;
+SHOW COLUMNS FROM wp_posts\G
+~~~
+
+The `\G` is is an alternative to `;` which prints query results in a long view,
+which is more humane for a terminal.
+
+# Readline config
 
 And a trick: Vi mode! Or Emacs if that&rsquo;s your thing.
 
 This uses the Readline library
-
-# Readline config
 
 <https://gist.github.com/DArcMattr/267dae1163133fdb120c898c104c91f3>
 
@@ -97,12 +118,14 @@ set visible-stats on
 $include /etc/inputrc
 ~~~
 
+<small>Also worth looking into: Tmux <https://tmux.github.io/></small>
+
 # WP-CLI configuration
 
 Reduces repeating yourself, create a `wp-cli.local.yml` file. reduces typing of
 same options repeatedly
 
-## Example for theme in a multisite
+## Example `wp-cli.local.yml` for theme in a multisite
 
 ~~~YAML
 user: 1
@@ -129,3 +152,8 @@ recommendations are tweakable
 
 Oh-My-ZSH: <https://github.com/robbyrussell/oh-my-zsh>, has shell helpers for
 using WP-CLI, Git, and informative prompts
+
+Git Hooks: <http://webadvent.org/2008/dont-commit-that-error-by-travis-swicegood.html>
+The sky is the limit here, you can run any shell script at any stage in your Git
+workflow.
+
